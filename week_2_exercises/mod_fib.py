@@ -1,14 +1,15 @@
 # Uses python3
 
-def mod_fib_brute(n, m):
+def mod_fib(n, m):
     '''
        Computes the nth fibonacci number modulo m.
        Constraints: 0 <= n <= 10**18 and 2 <= m <= 10**5
     '''
     seq_len, fib_seq = series(m)
-    print(seq_len)
+    assert (seq_len is not None)
     
-    
+    Fib_i = n % seq_len
+    return fib_seq[Fib_i] % m
     
 
 def fibonacci(n, memo={0: 0, 1: 1}):
@@ -40,4 +41,6 @@ def series(m):
         if series[0:i] == series[i:2*i]:
             return i, fib_seq
 
-    return None
+    return None, None
+
+print(mod_fib(int(input()), int(input())))
