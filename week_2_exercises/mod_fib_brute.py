@@ -44,4 +44,4 @@ def series(m):
 
     return None, None
 
-print(mod_fib(int(input()), int(input())))
+#print(mod_fib(int(input()), int(input())))

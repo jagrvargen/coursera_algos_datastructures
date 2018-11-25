@@ -46,11 +46,5 @@ def series(m):
     series.pop()
 
     return len(series), fib_seq
-'''
-    for i in range(2, len(series) // 2):
-        if series[0:i] == series[i:2*i]:
-            return i, fib_seq
 
-    return None, None
-'''
-print(mod_fib(int(input()), int(input())))
+#print(mod_fib(int(input()), int(input())))
